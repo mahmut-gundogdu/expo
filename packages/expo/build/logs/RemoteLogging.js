@@ -78,7 +78,7 @@ async function _sendNextLogBatchAsync(batch, logUrl) {
         'Expo-Platform': Platform.OS,
     };
     if (Constants.deviceName) {
-        headers['Device-Name'] = Constants.deviceName;
+        headers['Device-Name'] = 'device'; // Constants.deviceName;
     }
     try {
         response = await fetch(logUrl, {
